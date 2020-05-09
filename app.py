@@ -2,7 +2,6 @@ import random
 import string
 import sys
 
-
 class Automator:
     def makeUsername(self):
         userList = open('list.txt', 'r').readlines()
