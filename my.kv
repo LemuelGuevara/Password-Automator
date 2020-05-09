@@ -1,0 +1,31 @@
+<MyGrid>:
+	GridLayout:
+		cols:1
+		size: root.width , root.height 
+		
+
+		GridLayout:
+			cols:4
+				
+			Label:
+				id: label1
+				text: "Username:"
+				markup: True
+
+			Label:
+				id: label3
+				text: root.username
+				markup: True
+
+			Label:
+				id: label2
+				text: "Password:"
+
+			Label:
+				id: label4
+				text: root.password
+	
+		Button:
+			text:"Generate"
+			on_press: root.generate()
+			
