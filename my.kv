@@ -1,31 +1,46 @@
-<MyGrid>:
+#:import utils kivy.utils
+<MyFrame>:
+	canvas: 
+        Color: 
+            rgba: utils.get_color_from_hex('#345875')
+  
+        # size and position of Canvas 
+        Rectangle: 
+            pos: self.pos 
+            size: self.size 
+
 	GridLayout:
 		cols:1
-		size: root.width , root.height 
-		
+		size: root.width - 200 , root.height - 200
+		pos: 100,100
 
 		GridLayout:
-			cols:4
+			cols:2
 				
 			Label:
 				id: label1
 				text: "Username:"
-				markup: True
+				font_size: root.fontSize
+				
 
-			Label:
-				id: label3
+			TextInput:
+				id: textinput1
 				text: root.username
-				markup: True
+				font_size: root.fontSize
+				background_color: utils.get_color_from_hex('#b6b8bd')
 
 			Label:
 				id: label2
 				text: "Password:"
+				font_size: root.fontSize
 
-			Label:
-				id: label4
+			TextInput:
+				id: textinput2
 				text: root.password
-	
+				font_size: root.fontSize
+				background_color: utils.get_color_from_hex('#b6b8bd')
 		Button:
+			background_color: utils.get_color_from_hex('#345875')
 			text:"Generate"
+			font_size: root.fontSize
 			on_press: root.generate()
-			

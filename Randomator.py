@@ -13,12 +13,12 @@ class Automator:
         randomPass = [("".join(random.choice(keygen) for i in range(8)))]
         return ("".join(randomPass))
     
-    def output(self):
-        username = self.makeUsername()
-        password = self.makePass()
+    # def output(self):
+    #     username = self.makeUsername()
+    #     password = self.makePass()
 
-        while True:
-            print(f"\nUsername: {username}Password: {password}")
-            break
+    #     while True:
+    #         print(f"\nUsername: {username}Password: {password}")
+    #         break
 
 auto = Automator()
